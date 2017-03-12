@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Testing
+      dellemc_unity:
+        state: sync
+        ntp_server: "0.us.pool.ntp.org"
+        force: yes
+        unity_username: admin
+        unity_password: Password123!
+        unity_hostname: "192.168.0.34"
+      register: result
+    - debug: var=result
