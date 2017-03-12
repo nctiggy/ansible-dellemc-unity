@@ -2,7 +2,7 @@
 - hosts: localhost
   tasks:
     - name: Testing
-      dellemc_unity:
+      dellemc_unity_ntp:
         state: sync
         ntp_server: "0.us.pool.ntp.org"
         force: yes
